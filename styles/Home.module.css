@@ -38,6 +38,7 @@
 }
 
 .intro h1 {
+  margin: 10px 0 0 24px;
   max-width: 320px;
   font-size: 40px;
   font-weight: 600;
