@@ -6,6 +6,14 @@ import { CssBaseline } from "@mui/material";
 import { useState } from "react";
 
 export default function App({ Component, pageProps }: AppProps) {
-  const [theme, setTheme] = useState(createTheme());
-  return <Component {...pageProps} />;
+  // @ts-ignore
+  const [theme, setTheme] = useState(createTheme(light));
+
+  // Socket.io, Redux, Mui ....
+  return (
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      <Component {...pageProps} />;
+    </ThemeProvider>
+  );
 }
